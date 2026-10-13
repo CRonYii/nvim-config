@@ -2,6 +2,8 @@
 
 共享配置、`after/plugin/indent.lua`、`examples/local.lua` 和 `lazy-lock.json` 应纳入 Git；程序、插件目录和本机设置不随仓库分发。功能说明仍见 `README.md`；安装和迁移以本文为准：入口现在会在缺少 lazy.nvim 时从 GitHub 引导安装，不必另行手工克隆它。
 
+也可将仓库 URL 交给目标机器上的 Agent，要求它先阅读 [AGENTS.md](AGENTS.md)，按本文执行依赖准备和安全部署。
+
 ## 依赖与路径
 
 - 当前环境使用 Neovim **0.12.6**。迁移时优先使用相同版本；没有验证更早版本与这些锁定插件的兼容性。lazy.nvim 自身的最低要求不代表整套配置的最低要求。更换 Neovim 版本后请自行检查功能。
@@ -22,7 +24,7 @@
 cd "${XDG_CONFIG_HOME:-$HOME/.config}/${NVIM_APPNAME:-nvim}"
 git init
 git add .gitignore init.lua lua/plugins after/plugin/indent.lua \
-  lazy-lock.json README.md PORTABILITY.md LANGUAGES.md examples/local.lua
+  lazy-lock.json AGENTS.md README.md PORTABILITY.md LANGUAGES.md examples/local.lua
 git diff --cached
 # Confirm the staged files and your real Git identity before committing.
 git commit -m "chore(nvim): track portable configuration"
