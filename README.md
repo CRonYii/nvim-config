@@ -6,9 +6,9 @@
 
 将仓库 URL 和这段话交给目标机器上的 Agent：
 
-> 请安装这套 Neovim 配置：<仓库 URL>。先阅读仓库根目录 AGENTS.md、PORTABILITY.md 和 LANGUAGES.md，按这台机器的环境准备依赖并部署。保留旧 Vim，已有 Neovim 配置先备份；恢复锁定插件版本，语言服务器按需确认。不擅自提权、上传或运行测试，完成后告诉我启动方式和需要手工处理的事项。
+> 请安装这套 Neovim 配置：https://github.com/CRonYii/nvim-config 。先阅读仓库根目录 AGENTS.md、PORTABILITY.md 和 LANGUAGES.md，按这台机器的环境准备依赖并部署。保留旧 Vim，已有 Neovim 配置先备份；恢复锁定插件版本，语言服务器按需确认。不擅自提权、上传或运行测试，完成后告诉我启动方式和需要手工处理的事项。
 
-仓库需先发布到目标 Agent 可访问的地址；私有仓库还需要目标机器具备访问权限。
+公开仓库：[CRonYii/nvim-config](https://github.com/CRonYii/nvim-config)。目标 Agent 需要能访问 GitHub。
 平台或项目依赖不兼容时由 Agent 说明并协商，不承诺任意机器无条件可用。
 
 ## 已确认
@@ -152,4 +152,4 @@ cscope 保留为工作机器可选功能：用于难以生成 compile_commands.j
 `:Lazy restore` 恢复锁定版本；不会自动检查或更新插件。
 迁移指南见 [PORTABILITY.md](PORTABILITY.md)。目标机器安装 Neovim、fzf、rg、git；lazy.nvim 缺失时会自动引导安装。
 本机覆盖文件 `lua/config/local.lua` 不进 Git，示例见 `examples/local.lua`。
-配置使用本地 Git 管理；未设置远端或上传 GitHub，发布位置以后再决定。
+配置仓库：https://github.com/CRonYii/nvim-config ，默认分支为 `main`。

@@ -30,16 +30,16 @@ git diff --cached
 git commit -m "chore(nvim): track portable configuration"
 ```
 
-已有仓库则跳过 `git init`，按实际改动挑选暂存文件。不要强制添加被忽略的本机文件。提交身份使用你自己的真实 Git 设置；本文不设置全局身份。远端创建、可见性和发布由你另行决定，本次准备不创建或推送远端。迁移源可以是你自行准备的 GitHub 仓库，也可以是目标机可访问的本地 Git 仓库。
+已有仓库则跳过 `git init`，按实际改动挑选暂存文件。不要强制添加被忽略的本机文件。提交身份使用你自己的真实 Git 设置；本文不设置全局身份。本配置的公开远端为 https://github.com/CRonYii/nvim-config 。迁移时可直接克隆；创建自己的 fork、改变可见性或向其他远端发布时应另行确认。
 
 ## 在目标机部署：先备份，后克隆
 
-先自行安装依赖。下面是 Bash 命令，**先替换 `repo`**。备份目录使用唯一名称；不删除现有配置，不覆盖旧插件目录，也不改 shell 启动文件。
+先自行安装依赖。下面是 Bash 命令；如果使用自己的 fork，可替换 `repo`。备份目录使用唯一名称；不删除现有配置，不覆盖旧插件目录，也不改 shell 启动文件。
 
 ```bash
 (
   set -eu
-  repo='https://github.com/YOUR_ACCOUNT/YOUR_NVIM_REPO.git'
+  repo='https://github.com/CRonYii/nvim-config.git'
   # Alternatively: repo='/path/to/an/accessible/local/repository'
   config="${XDG_CONFIG_HOME:-$HOME/.config}/${NVIM_APPNAME:-nvim}"
   mkdir -p -- "$(dirname -- "$config")"
