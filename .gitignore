@@ -1,0 +1,38 @@
+# Machine-local settings/specs and optional helper modules
+/lua/config/local.lua
+/lua/local_only/
+
+# Agent artifacts and scratch files
+.pi/
+/scratch/
+/tmp/
+*.swp
+*.swo
+*~
+
+# Runtime data belongs under stdpath(), not in this repository
+/.cache/
+/.local/
+/cache/
+/data/
+/state/
+/lazy/
+/pack/
+/undo/
+/backup/
+/shada/
+*.log
+Session.vim
+Session*.vim
+*.shada
+*.shada.tmp*
+
+# External build/index artifacts (generate per project, never bundle)
+compile_commands.json
+compile_flags.txt
+cscope.out
+cscope.in.out
+cscope.po.out
+cscope.files
+
+# Shared config and lazy-lock.json are intentionally tracked.
